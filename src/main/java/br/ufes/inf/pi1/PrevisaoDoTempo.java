@@ -26,11 +26,10 @@ public class PrevisaoDoTempo {
     HttpEntity entity1 = response1.getEntity();
     // do something useful with the response body
     // and ensure it is fully consumed
-    System.out.println(EntityUtils.toString(entity1));
+    // System.out.println(EntityUtils.toString(entity1));
 
     // Parse string -> json
-    // JsonObject json =
-    // JsonParser.parseString(EntityUtils.toString(entity1)).getAsJsonObject();
+    JsonObject json = JsonParser.parseString(EntityUtils.toString(entity1)).getAsJsonObject();
     // json.get("temperature");
 
     response1.close();
